@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<title>Conversor de Moedas DevCLub</title>
+
+<body>
+    <video class="video" autoplay muted loop>
+        <source src="./assets/fundomoedas.mp4" type="video/mp4">
+    </video>
+
+
+    <div class="container">
+        <img src="./assets/img-money-symbols.png" class="moneySymbols">
+        <main>
+            <h1>Conversor de Moedas simplificado </h1>
+            <p>Simplified currency converter</p>
+        </main>
+
+        <div class="input-container">
+            <p>Converter de:</p>
+            <select id="moedaOrigem" placeholder="Escolha a moeda de origem">
+
+                <option value="BRL Real Brasileiro">R$ Real Brasileiro</option>
+
+            </select>
+
+            <label>Converter <b>para:</b></label>
+
+            <select id="moedaDestino" placeholder="Escolha a moeda de destino">
+
+                <option value="USD Dólar americano"><b>US$ </b>Dólar americano</option>
+                <option value="EUR euro"><b>€ </b>Euro</option>
+                <option value="JPY Iene japonês"><b>¥ </b>Iene japonês</option>
+                <option value="GBP Libra esterlina"><b>£ </b>Libra esterlina</option>
+                <option value="BTC Bitcoin"><b>₿ </b>Bitcoin</option>
+            </select>
+            <label for="valor">Digite o valor a converter:</label>
+            <input type="number" id="valor" placeholder="Digite o valor a converter">
+            <button id="botao-converter">Converter</button>
+
+        </div>
+        <div class="resultado">
+            <img src="./assets/REAL.png" class="real">
+            <img src="./assets/DOLAR.png" class="dolar">
+            <img src="./assets/EURO.png" class="euro">
+            <img src="./assets/IENE.png" class="iene">
+            <img src="./assets/LIBRA.png" class="libra">
+            <img src="./assets/bitcoin.png" class="bitcoin">
+
+        </div>
+
+    </div>
+    </div>
+
+</html>

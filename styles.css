@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    Font-family: 'Roboto', sans-serif;
+}
+
+.video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container {
+    display: block;
+    background-color: rgba(1, 9, 20, 0.9);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    border: 1px solid #fff, .5;
+    width: 90vw auto;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    margin: 60px 20vw;
+
+}
+
+label {
+    color: #fff;
+    font-size: 18px;
+}
+
+
+h1 {
+    display: block;
+    position: relative;
+    top: 10%;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin: 15px auto;
+    padding: 20px;
+}
+
+p {
+    text-align: center;
+    position: relative;
+    top: 20%;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    margin: 15px auto;
+
+
+}
+
+.moneySymbols {
+    display: block;
+    width: 300px;
+    height: auto;
+    position: relative;
+    max-width: 350px;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(4, 175, 70, 0.3);
+    margin-top: 20px;
+    margin: 20px 20%;
+    max-width: auto;
+    border: 1px solid #04c03d;
+    box-shadow: 0 0 25px rgba(4, 206, 82, 0.3);
+    border-radius: 35px;
+}
+
+#moedaOrigem,
+#moedaDestino,
+#valor {
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 9px;
+    border: 1px solid rgba(4, 206, 82, 0.5);
+    padding: 5px;
+}
+
+#botao-converter {
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 9px;
+    border: 1px solid rgba(4, 206, 82, 0.5);
+    padding: 5px;
+    background-color: rgba(4, 175, 70, 0.3);
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(182deg, #0dd273, #013f32);
+    background-size: 150% 100%;
+    background-position: right;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    transition: background-position 0.6s ease, transform 0.6s ease;
+
+}
+
+#botao-converter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9px;
+    background: linear-gradient(90deg, #0a9111a8, #08ffd6);
+    opacity: 0;
+    transition: opacity 1.6s ease;
+    z-index: -1;
+}
+
+#botao-converter:hover::before {
+    opacity: 1;
+}
+
+#botao-converter:hover {
+    transform: scale(1.1);
+    color: #013f32;
+    font-weight: 600;
+    transition: color 1s ease, transform 1s ease;
+
+}
+
+.resultado {
+    position: relative;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(4, 175, 70, 0.3);
+    margin-top: 20px;
+    margin: 20px 20%;
+    height: 250px;
+    max-width: auto;
+    border: 1px solid rgba(4, 206, 82, 0.5);
+    border-radius: 35px;
+    box-shadow: 0 0 25px rgba(4, 206, 82, 0.3);
+}
