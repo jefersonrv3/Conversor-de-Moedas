@@ -43,7 +43,17 @@ function converterMoeda() {
     const ValorMoedaConvertida = document.querySelector(".ValorMoedaConvertida")
 
     console.log(realToDolar); /* exibição do resultado da conta so para teste mesmo  */
-    ValorMoedaOrigem.innerHTML = inputValor;
-    ValorMoedaConvertida.innerHTML = realToDolar;
+
+
+    ValorMoedaOrigem.innerHTML = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    }).format(inputValor);
+
+    ValorMoedaConvertida.innerHTML = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD"
+    }).format(realToDolar);
+
 }
 botaoConverter.addEventListener('click', converterMoeda); /*  o click do botão, onde ele dá o "triigger" pro cálculo acontecer */
