@@ -102,9 +102,10 @@ p {
 
 #botao-converter {
     width: 200px;
-    height: 30px;
+    height: 40px;
     margin: 10px;
-    border-radius: 9px;
+    border-radius: 25px;
+    font-size: 16px;
     border: 1px solid rgba(4, 206, 82, 0.5);
     padding: 5px;
     background-color: rgba(4, 175, 70, 0.3);
@@ -121,7 +122,7 @@ p {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 9px;
+    border-radius: 25px;
     background: linear-gradient(90deg, #0a9111a8, #09d3b8);
     opacity: 0;
     transition: opacity 1.6s ease;
@@ -136,7 +137,7 @@ p {
     transform: scale(1.1);
     color: #013f32;
     font-weight: 600;
-    transition: color 1s ease, transform 1s ease;
+    transition: color 1.8s ease, transform 1.8s ease;
 }
 
 .botao-converter:active {
@@ -177,7 +178,6 @@ p {
     margin: 15px auto;
     align-items: center;
     justify-content: center;
-
 }
 
 .moeda-convertida {
@@ -196,7 +196,6 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 15px auto;
     padding: 10px;
 
 }
@@ -206,7 +205,6 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 15px auto;
     padding: 10px;
 
 }
