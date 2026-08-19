@@ -10,12 +10,12 @@ let dolarhj, eurohj, librahj, ienehj, bitcoinhj;
 // Busca os dados
 fetch(url)
     .then(function (resposta) {
-        return resposta.json(); // transforma a resposta em objeto JavaScript
+        return resposta.json(); // transforma a resposta em objeto JScript
     })
     .then(function (dados) {
-        console.log(dados); // aqui você já pode ver tudo que a API retornou
+        console.log(dados); // aqui  já da p ver tudo que a API retornou
 
-        // Pegando o valor de cada moeda (o campo "bid" é a cotação)
+        // Pegando o valor de cada moeda (o campo "bid" é a cotação atual)
         dolarhj = dados.USDBRL.bid;
         eurohj = dados.EURBRL.bid;
         librahj = dados.GBPBRL.bid;
@@ -35,11 +35,15 @@ fetch(url)
 const botaoConverter = document.getElementById('botao-converter');
 
 function converterMoeda() {
-    inputValor = document.getElementsByClassName('input-valor')[0].value;
+    const inputValor = document.getElementsByClassName('input-valor')[0].value;
     /* Esse éo js coletando o valor digitado pelo USER */
 
     const realToDolar = inputValor / dolarhj; /* aqui é a operação da divisão direta dos dois valores par exibição depois */
+    const ValorMoedaOrigem = document.querySelector(".ValorMoedaOrigem")
+    const ValorMoedaConvertida = document.querySelector(".ValorMoedaConvertida")
 
     console.log(realToDolar); /* exibição do resultado da conta so para teste mesmo  */
+    ValorMoedaOrigem.innerHTML = inputValor;
+    ValorMoedaConvertida.innerHTML = realToDolar;
 }
 botaoConverter.addEventListener('click', converterMoeda); /*  o click do botão, onde ele dá o "triigger" pro cálculo acontecer */
